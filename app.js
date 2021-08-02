@@ -7,8 +7,6 @@ const port = 3030
 
 app.use(server.static('public'))
 
-app.listen(port, () => console.log('Servidor corriendo en el puerto', port))
-
 app.get("/home", (req, res) => {
     res.sendFile(path.join(__dirname, "views", "index.html"))
 } )
@@ -33,3 +31,5 @@ app.get("/lovelace", (req, res) => {
 app.get("/turing", (req, res) => {
     res.sendFile(path.join(__dirname, "views", "turing.html"))
 } )
+
+app.listen(port, () => console.log('Servidor corriendo en el puerto', port))
